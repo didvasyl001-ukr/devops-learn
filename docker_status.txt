@@ -1,0 +1,3 @@
+CONTAINER ID   IMAGE       COMMAND                  CREATED              STATUS              PORTS                                                    NAMES
+80bc8aaa4777   nginx       "/docker-entrypoint.…"   About a minute ago   Up About a minute   0.0.0.0:8080->80/tcp, [::]:8080->80/tcp                  my-web
+5a23c35b57b6   mysql:8.0   "docker-entrypoint.s…"   3 days ago           Up 3 hours          0.0.0.0:3306->3306/tcp, [::]:3306->3306/tcp, 33060/tcp   python-mysql-project-db-1
