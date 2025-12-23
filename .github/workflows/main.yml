@@ -1,8 +1,14 @@
-name: DevOps Hello World
+name: Docker Build Check
 on: [push]
 jobs:
-  say-hello:
+  build-image:
     runs-on: ubuntu-latest
     steps:
-      - name: Greet
-        run: echo "Hello, DevOps! Automation is running."
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Build Docker image
+        run: docker build -t my-test-app .
+
+      - name: Verify image
+        run: docker images | grep my-test-app
